@@ -14,6 +14,6 @@ func main() {
 
 	var nums []int
 
-	nums = append(nums, 10, 20, 80) // u can do it mulitipull times thats it
+	nums = append(nums, 10, 20, 80) // u can do it mulitipul times thats it
 	fmt.Println(nums)
 }
