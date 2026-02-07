@@ -15,8 +15,6 @@ func main() {
 		Name:  "abhishek",
 		Email: "abhishek@gmail.com",
 	}
-
 	// ui.Email = "abhi@gmail.com"
-
 	fmt.Println(ui)
 }

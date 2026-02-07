@@ -7,7 +7,16 @@ import (
 	"time"
 )
 
-func successhandler(w http.ResponseWriter, r *http.Request) {
+func writeJSON(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func testhandler(w http.ResponseWriter, r *http.Request) {
+
+	if r.Method != http.MethodPost {
+
+	}
+
 	w.Header().Set("Content-Type", "application/json")
 
 	w.WriteHeader(http.StatusOK)
@@ -18,13 +27,13 @@ func successhandler(w http.ResponseWriter, r *http.Request) {
 		"dateandtime": time.Now().UTC(),
 	}
 
-	_ = json.NewEncoder(w).Encode(res)
+	_ = json.NewEncoder().Encode()
 
 }
 
 func main() {
 
-	http.HandleFunc("/ok", successhandler)
+	http.HandleFunc("/test", testhandler)
 
 	err := http.ListenAndServe(":5000", nil)
 
