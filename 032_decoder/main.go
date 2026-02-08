@@ -20,7 +20,10 @@ func testhandler(w http.ResponseWriter, r *http.Request) {
 			"ok":    false,
 			"error": "only post is allowed man ",
 		})
+		return
 	}
+
+	defer r.Body.Close()
 
 	w.Header().Set("Content-Type", "application/json")
 
