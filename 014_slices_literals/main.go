@@ -16,4 +16,9 @@ func main() {
 
 	nums = append(nums, 10, 20, 80) // u can do it mulitipul times thats it
 	fmt.Println(nums)
+
+	s := []int{1, 2, 3, 4}
+
+	s = s[1:]
+	fmt.Println(s)
 }
