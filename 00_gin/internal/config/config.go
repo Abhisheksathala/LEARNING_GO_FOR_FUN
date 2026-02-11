@@ -7,42 +7,42 @@ import (
 	"github.com/joho/godotenv"
 )
 
-type config struct {
-	mongoURI   string
-	mongoDB    string
-	serverPort string
+type Config struct {
+	MongoURI   string
+	MongoDB    string
+	ServerPort string
 }
 
-func Load() (config, error) {
+func Load() (Config, error) {
 
 	// godotenv.load reads .env and sets them into process env
 	// os.getenv -> read those values
 
 	if err := godotenv.Load(); err != nil {
-		return config{}, fmt.Errorf("filed to load .env")
+		return Config{}, fmt.Errorf("filed to load .env")
 	}
 
 	mongoURI, err := extactEnv("MONGO_URI")
 
 	if err != nil {
-		return config{}, err
+		return Config{}, err
 	}
 
 	mongoDB, err := extactEnv("MONGO_NAME")
 
 	if err != nil {
-		return config{}, err
+		return Config{}, err
 	}
 	port, err := extactEnv("PORT")
 
 	if err != nil {
-		return config{}, err
+		return Config{}, err
 	}
 
-	return config{
-		mongoURI:   mongoURI,
-		mongoDB:    mongoDB,
-		serverPort: port,
+	return Config{
+		MongoURI:   mongoURI,
+		MongoDB:    mongoDB,
+		ServerPort: port,
 	}, nil
 
 }
