@@ -9,11 +9,10 @@ func main() {
 	// :=
 
 	sub := 5000
-
 	sub = sub + 1000
 
 	like, comment := 100, "1000"
 
+	fmt.Println(sub)
 	fmt.Println(like, comment)
-
 }
