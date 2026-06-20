@@ -4,7 +4,9 @@ import "fmt"
 
 func main() {
 
-	score := 72
+	// if else
+
+	score := 74
 
 	if score >= 90 {
 		fmt.Println("a")

@@ -7,4 +7,6 @@ import (
 
 func main() {
 	fmt.Println("sqr(25)", math.Sqrt(25))
+
+	fmt.Println(math.Pi)
 }
