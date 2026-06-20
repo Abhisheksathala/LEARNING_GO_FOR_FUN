@@ -10,30 +10,30 @@ func main() {
 		"jone":   75,
 	}
 
-	fmt.Println(ages["sangam"], len(ages))
+	fmt.Println(ages["sangam"], len(ages)) // ??
 
 	// make(map[k]v)
 
-	var score map[string]int //nil map
+	// var score map[string]int //nil map
 
-	fmt.Println(score, score["a"])
+	// fmt.Println(score, score["a"])
 
-	score = make(map[string]int)
+	// score = make(map[string]int)
 
-	score["math"] = 90
-	score["s"] = 70
+	// score["math"] = 90
+	// score["s"] = 70
 
-	fmt.Println(score)
+	// fmt.Println(score)
 
-	user := map[string]string{
-		"u1": "sangam",
-		"u2": "sangams",
-		"u3": "sangamss",
-	}
+	// user := map[string]string{
+	// 	"u1": "sangam",
+	// 	"u2": "sangams",
+	// 	"u3": "sangamss",
+	// }
 
-	fmt.Println(user)
+	// fmt.Println(user)
 
-	delete(user, "u1")
-	fmt.Println(user)
+	// delete(user, "u1")
+	// fmt.Println(user)
 
 }

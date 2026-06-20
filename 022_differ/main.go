@@ -7,6 +7,7 @@ import (
 
 func main() {
 	// defer resp.bosy.close()
+	doWork(true)
 
 }
 

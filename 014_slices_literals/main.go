@@ -3,6 +3,11 @@ package main
 import "fmt"
 
 func main() {
+
+	// slices in the GO most common collection Type
+	// these are like dynamic arrays
+	// most imporatnat in the GO
+
 	// common collection type
 	// dynamic and can grow
 	// []type{....}
@@ -19,6 +24,11 @@ func main() {
 
 	s := []int{1, 2, 3, 4}
 
-	s = s[1:]
+	s = s[1:] // now s will be [2 3 4] but why it cut the 1??
+	// it remove the first elment from the slice
+
+	s = s[:len(s)-1] // now s will be [1 2 3] but why it cut the 4??
+	// it remove the last elment from the slice
+
 	fmt.Println(s)
 }
