@@ -14,7 +14,7 @@ func helloHandler(res http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/hello", helloHandler)
-	fmt.Println("try going to 4000 port ")
+	fmt.Println("try going to 5000 port ")
 	err := http.ListenAndServe(":5000", nil)
 	fmt.Println(err)
 }
