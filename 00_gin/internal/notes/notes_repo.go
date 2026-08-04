@@ -9,7 +9,7 @@ import (
 )
 
 // repostiry is nothing but the data access layer man
-
+// Repo -> data access layer
 type Repo struct {
 	coll *mongo.Collection
 }

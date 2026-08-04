@@ -10,7 +10,7 @@ type Note struct {
 	ID        primitive.ObjectID `bson:"_id" json:"id"`
 	Title     string             `bson:"title" json:"title"`
 	Content   string             `bson:"content" json:"content"`
-	pinned    bool               `bson:"pinned" json:"pinned"`
+	Pinned    bool               `bson:"pinned" json:"pinned"`
 	CreatedAt time.Time          `bson:"createdAt" json:"createdAt"`
 	UpdatedAt time.Time          `bson:"updatedAt" json:"updatedAt"`
 }
@@ -18,5 +18,5 @@ type Note struct {
 type CreateNoteRequest struct {
 	Title   string `json:"title" binding:"required"`
 	Content string `json:"content" binding:"required"`
-	pinned  bool   `json:"pinned" binding:"required"`
+	Pinned  bool   `json:"pinned" binding:"required"`
 }

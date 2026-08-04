@@ -26,15 +26,17 @@ func (h *Handler) CreateNote(c *gin.Context) {
 		})
 		return
 	}
+
 	now := time.Now().UTC()
 	note := Note{
 		ID:        primitive.NewObjectID(),
 		Title:     req.Title,
 		Content:   req.Content,
-		pinned:    req.pinned,
+		Pinned:    req.Pinned,
 		CreatedAt: now,
 		UpdatedAt: now,
 	}
+
 	created, err := h.repo.Create(c.Request.Context(), note)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
